@@ -31,16 +31,16 @@ The Advanced Programming Interface (API) is experimental, but I welcome you to t
 <h2>How it works</h2>
 The API supports GET requests for annual fishery landings data at the following url:
 <br /><br />
-<a href="./api/landings.json">http://openfisheries.org/api/landings</a>
+<a href="./api/landings.json">http://openfisheries.org/api/landings.json</a>
 <br /><br />
 and produces a valid JSON document for global fisheries landings. There are parsers for nearly every programming language for reading JSON documents including for the <a href="http://cran.r-project.org/web/packages/RJSONIO/index.html">R-project</a> and <a href="http://docs.python.org/library/json.html">Python</a>.
 <br /><br />
 <h3>API parameters</h3>
 In addition to global aggregate landings, one can download landings by country or species with the following two urls. 
 <br /><br />
-<a href="./api/landings/countries.json">http://openfisheries.org/api/landings/countries</a>
+<a href="./api/landings/countries.json">http://openfisheries.org/api/landings/countries.json</a>
 <br /><br />
-<a href="./api/landings/species.json">http://openfisheries.org/api/landings/species</a>
+<a href="./api/landings/species.json">http://openfisheries.org/api/landings/species.json</a>
 <br /><br />
 
 These URLs will return a complete list of all countries and species, respectively, that can be used in API calls. For example, to get an aggregate list of landings by the United States, one would use the url:
@@ -51,7 +51,7 @@ Where the final parameter ('USA') is the <a href="http://en.wikipedia.org/wiki/I
 
 Similarly, one can download all landings for skipjack tuna using the following url:
 <br /><br />
-<a href="./api/landings/species/SKJ.json">http://openfisheries.org/api/landings/species/SKJ</a>
+<a href="./api/landings/species/SKJ.json">http://openfisheries.org/api/landings/species/SKJ.json</a>
 <br /><br />
 Where the last parameter in the url ('SKJ') is the three-letter <a href="http://www.fao.org/fishery/collection/asfis/en">ASFIS species code</a>
 
