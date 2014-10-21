@@ -20,7 +20,7 @@ prep_fao_fishstat_data <- function(dataset) {
   species_data <<- aggregate(
     out_data$catch, 
     by=list(
-      iso3c=out_data$a3_code,
+      a3_code=out_data$a3_code,
       year=out_data$year
     ), 
     FUN="sum"
@@ -45,7 +45,7 @@ output_country_json <- function(countries) {
 
 return_single_species_json <- function(a3_code) {
   writeLines(
-    toJSON(country_data[which(species_data$a3_code==a3_code), c('year', 'catch')]),
+    toJSON(species_data[which(species_data$a3_code==a3_code), c('year', 'catch')]),
     paste('../api/landings/species/', a3_code, '.json', sep = '')
   )
 }
