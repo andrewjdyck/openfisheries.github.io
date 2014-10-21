@@ -5,7 +5,7 @@
 #   1. the country column contains a 182 observations with null
 read_fao_data <- function() {
   in_data <<- read.csv(
-    './data/fishstat_export_s_capture2013.csv', 
+    '../data/fishstat_export_s_capture2013.csv', 
     as.is=TRUE,
   )
 }

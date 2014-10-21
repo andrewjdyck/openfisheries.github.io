@@ -1,4 +1,5 @@
 
+setwd('~/Dropbox/business/openfisheries.org/openfisheries.github.io/_bin/')
 source('./fao_data_utils.r')
 source('./prepare_api_json_data.r')
 
