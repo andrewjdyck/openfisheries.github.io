@@ -1,128 +1,251 @@
-<html>
-<head>
-<title>OpenFisheries.org</title>
-<script type="text/javascript" src="./js/protovis.min.js"></script>
-<script type="text/javascript" src="./js/global_data.js"></script>
-<link rel="stylesheet" type="text/css" href="./style.css" />
-<meta name="description" content="A platform for aggregating global fishery data, disseminating this data to researchers through open APIs and pushing the boundaries of fisheries research." /> 
-<meta name="keywords" content="fisheries, economics, opendata, data, open, API, platform" /> 
-<meta name="google-site-verification" content="WZltmuJFfBOhptyB67GewRwsDOjW5K2dg3zQxvbxsRY" />
-<link rel="canonical" href="http://openfisheries.org/" /> 
-</head>
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="OpenFisheries.org">
+<meta name="description" content="A platform for global fisheries data and analytics.">
+<meta name="generator" content="Hugo 0.31.1" />
+<title>OpenFisheries</title>
 
-<body>
+<!-- Favicon -->
+<link rel="shortcut icon" href="/favicon.ico">
+<!-- Bootstrap Core CSS -->
+<link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
+<!-- Custom Fonts -->
+<link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css" type="text/css">
+<!-- Plugin CSS -->
+<link rel="stylesheet" href="/css/animate.min.css" type="text/css">
+<!-- Custom CSS -->
+<link rel="stylesheet" href="/css/creative.css" type="text/css">
+<link rel="stylesheet" href="/css/modals.css" type="text/css">
 
-<div id="container">
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
 
-<div id="header">
-<img src="./img/betaLogo.png" id="logo" />
-<ul id="head-menu">
-<li><a href="./">Home</a></li>
-<li><a href="./about.html">About</a></li>
-<li><a href="./api-info.html">API</a></li>
-<li><a href="http://blog.openfisheries.org/">Blog</a></li>
-<li><a href="./contact.html">Contact</a></li>
-</ul>
-</div>
-
-<div id="main">
-<div id="center"><div id="fig">
-<script type="text/javascript+protovis">
-    /* Sizing and scales. */
-    var w = 400,	// width in pixels
-    h = 400,		// height in pixels
-    x = pv.Scale.linear(1949, 2010).range(0, w),	// x-scale
-    y = pv.Scale.linear(0, 100000000).range(0, h); // y-scale
-    
-    /* The root panel. */
-    var vis = new pv.Panel()
-    .width(w)
-    .height(h)
-    .bottom(50)	// bottom padding
-    .left(120)	// left placement on page
-    .right(20)	// right placement on page
-    .top(50);	// top padding
-    
-    /* Y-axis and ticks. */
-    vis.add(pv.Rule)
-    .data(y.ticks())
-    .bottom(y)
-    .strokeStyle(function(d) d ? "#eee" : "#000")
-    .anchor("left").add(pv.Label)
-    .visible(function(d) d > 0 && d <= 100000000)
-    .text(y.tickFormat);
-    
-    /* X-axis and ticks. */
-    vis.add(pv.Rule)
-    .data(x.ticks())
-    .left(x)
-    .strokeStyle(function(d) d ? "#eee" : "#000")
-    .anchor("bottom").add(pv.Label)
-    .visible(function(d) d > 0 && d <= 2010)
-    .text(pv.Format.number(x).group(""));
-	
-    vis.add(pv.Line)
-    .data(data)
-    .interpolate("linear")
-    .left(function(d) x(d.x))
-    .bottom(function(d) y(d.y))
-    .lineWidth(3);
-
-    /* Y-Axis Label */
-    vis.add(pv.Label)
-    .data(["Global fishery landings (tonnes)"])
-    .left(-100)
-    .font("10pt Arial")
-    .bottom(h/2)
-    .textAlign("center")
-    .textAngle(-Math.PI/2);
-
-    /* X-Axis Label */
-    vis.add(pv.Label)
-    .data(["Year"])
-    .left(w/2)
-    .font("10pt Arial")
-    .bottom(-40)
-    .textAlign("center");
+    </head>
+    <body id="page-top">
         
-    vis.render();            
+            <!-- NAVIGATION -->
+<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+                <a class="navbar-brand page-scroll" href="#page-top">OpenFisheries.org</a>
+            
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                
+                
+                    <li>
+                        <a class="page-scroll" href="#services">Services</a>
+                    </li>
+                
+                
+                
+                
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+
+        
+
+        
+            <!-- HEADER -->
+<header>
+    <div class="header-content">
+        <div class="header-content-inner">
+            
+                <h1>OpenFisheries</h1>
+            
+            
+            
+            
+                <a href="#about" class="btn btn-primary btn-xl page-scroll">Find out more</a>
+            
+        </div>
+    </div>
+</header>
+
+        
+
+        
+            <!-- ABOUT -->
+<section class="bg-primary" id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+                
+                    <h2 class="section-heading">About OpenFisheries</h2>
+                
+                
+                    <hr class="light">
+                
+                
+                    <p class="text-faded"><p>The OpenFisheries.org project seeks to advance the practice of data science in fisheries. The project does this by consolidating global fisheries dataset through an open web platform and viewing this data through a lens of modern analytics. The project lead is <a href="https://twitter.com/andrewjdyck">Andrew Dyck</a>.</p>
+
+<p>The OpenFisheries.org flagship project is the <a href="https://github.com/OpenFisheries/api.openfisheries.org">Global Fisheries REST API</a>. Information about using the API is available on Github. Collaboration with the <a href="https://ropensci.org/">rOpenSci</a> team has produced a <a href="https://github.com/ropensci/rfisheries">package for the R programming language</a> that makes the API accessible for educators and data scientists alike.</p>
+</p>
+                
+                
+                    <a href="#services" class="btn btn-default btn-xl">Get started!</a>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+        
+
+        
+            <!-- SERVICES -->
+<section id="services">
+    
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Services</h2>
+                    <hr class="primary">
+                </div>
+            </div>
+        </div>
+    
+    <div class="container">
+        <div class="row">
+            
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="service-box">
+                    <i class="fa fa-4x fa-compass wow bounceIn text-primary"></i>
+                    <h3>Fisheries economics &amp; analysis</h3>
+                    
+                        <p class="text-muted">Economic impact analysis of global fishing trends. Consultancy has been engaged by NGOs, academia, and journalists.</p>
+                    
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="service-box">
+                    <i class="fa fa-4x fa-cloud wow bounceIn text-primary"></i>
+                    <h3>Global landings API</h3>
+                    
+                        <p class="text-muted">This <a href="https://github.com/OpenFisheries/api.openfisheries.org">flagship product</a> forms the backbone of fisheries data science, enabling analytics in R, Python or any other language.</p>
+                    
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="service-box">
+                    <i class="fa fa-4x fa-flask wow bounceIn text-primary"></i>
+                    <h3>OpenFisheries Lab</h3>
+                    
+                        <p class="text-muted">Collaboration with <a href="https://ropensci.org/">ROpenSci.org</a> to bring open fisheries data into reproducible science using the <a href="https://github.com/ropensci/rfisheries">R scientific programming language</a>.</p>
+                    
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="service-box">
+                    <i class="fa fa-4x fa-github-alt wow bounceIn text-primary"></i>
+                    <h3>Open source</h3>
+                    
+                        <p class="text-muted">Fork and <a href="https://github.com/OpenFisheries">contribute</a> to open source projects.</p>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+        
+
+        
+
+        
+
+        
+
+        
+            <!-- CONTACT -->
+<section id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+                
+                    <h2 class="section-heading">Contact</h2>
+                
+                
+                
+            </div>
+            
+            
+                <div class="
+                
+                    col-lg-8 col-lg-offset-2
+                
+                 text-center">
+                    <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
+                    <p><a href="mailto:openfisheries@gmail.com">openfisheries@gmail.com</a></p>
+                </div>
+            
+        </div>
+    </div>
+</section>
+
+        
+
+        
+
+        <!-- jQuery -->
+<script src="/js/jquery.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+<!-- Plugin JavaScript -->
+<script src="/js/jquery.easing.min.js"></script>
+<script src="/js/jquery.fittext.js"></script>
+<script src="/js/wow.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/creative.js"></script>
+
+
+        
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-17319162-2', 'auto');
+ga('send', 'pageview');
 </script>
-</div></div>
 
-</div>
-
-
-
-
-
-<div id="footer">
-<ul>
-<h3>Contact</h3>
-<li><a href="http://www.twitter.com/openfisheries">@openfisheries</a></li>
-<li><a href="mailto:openfisheries@gmail.com">openfisheries [at] gmail [dot] com</a></li>
-<li><a href="https://github.com/andrewjdyck/openfisheries.org">Fork on Github</a></li>
-<li>A project of <a href="http://northernlightsdata.com">Northern Lights Data Lab</a></li>
-</ul>
-
-
-<!-- Google Analytics code -->
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-17319162-2']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
-</div>
-
-</div>
-
-</body>
-
+    </body>
 </html>
