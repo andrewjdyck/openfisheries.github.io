@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>OpenFisheries</title>
-    <link>/</link>
+    <link>http://openfisheries.org/</link>
     <description>Recent content on OpenFisheries</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://openfisheries.org/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Some title</title>
-      <link>/post/food/</link>
+      <link>http://openfisheries.org/post/food/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/post/food/</guid>
-      <description>Title here something about food!
+      <guid>http://openfisheries.org/post/food/</guid>
+      <description> Title here something about food!
  </description>
     </item>
     

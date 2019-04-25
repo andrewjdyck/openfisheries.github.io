@@ -3,26 +3,26 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/categories/</loc>
+    <loc>http://openfisheries.org/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/</loc>
+    <loc>http://openfisheries.org/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/post/</loc>
+    <loc>http://openfisheries.org/post/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/post/food/</loc>
+    <loc>http://openfisheries.org/post/food/</loc>
   </url>
   
   <url>
-    <loc>/tags/</loc>
+    <loc>http://openfisheries.org/tags/</loc>
     <priority>0</priority>
   </url>
   
