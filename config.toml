@@ -1,0 +1,111 @@
+baseurl = "http://openfisheries.org/"
+languageCode = "en-us"
+title = "OpenFisheries"
+theme = "hugo-creative-theme"
+googleAnalytics = "UA-17319162-2"
+
+[params]
+
+	# You can use Markdown syntax for urls [text](//url.to/source) for
+	# most longer texts.
+
+	# All icons using Fontawesome's icon font. Look at http://fontawesome.io/icons/
+	# for more icons. The icons are represented by their corresponding
+	# CSS class.
+
+	# All projects of the portfolio are defined in their own files.
+	# You can find example projects at 'exampleSite/data/projects'. Copy the 'projects'
+	# folder into the 'data' directory at the root of this Hugo site.
+	# For more information take a look at the README.
+
+	# To provide some metadata for search engines feel free to add some
+	# information about you and your website.
+	name = "OpenFisheries.org"
+	description = "A platform for global fisheries data and analytics."
+
+	# The path must be relative to the static folder
+	favicon = "favicon.ico"
+
+
+	# Navigation
+	[params.navigation]
+		brand = "OpenFisheries.org"
+
+		[params.navigation.links]
+			about     = "About"
+			services  = "Services"
+			portfolio = "Portfolio"
+			contact   = "Contact"
+
+
+	# Hero section
+	[params.hero]
+		# To change the background of the hero section, replace the 'header.jpg' at './static/img' with your own.
+		slogan     = "OpenFisheries"
+		# subtitle   = "[Lorem](//google.com) ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis nesciunt consequatur ut nihil voluptatem fugiat eos eveniet alias in veniam?"
+		buttonText = "Find out more"
+
+
+	# About section
+	[params.about]
+		headline    = "About OpenFisheries"
+		description = "The OpenFisheries.org project seeks to advance the practice of data science in fisheries. The project does this by consolidating global fisheries dataset through an open web platform and viewing this data through a lens of modern analytics. The project lead is [Andrew Dyck](https://twitter.com/andrewjdyck). \n \n The OpenFisheries.org flagship project is the [Global Fisheries REST API](https://github.com/OpenFisheries/api.openfisheries.org). Information about using the API is available on Github. Collaboration with the [rOpenSci](https://ropensci.org/) team has produced a [package for the R programming language](https://github.com/ropensci/rfisheries) that makes the API accessible for educators and data scientists alike."
+		
+		# buttonText  = "Get started!"
+		# buttonUrl   = "#services"
+
+
+	# Service section
+	[params.services]
+		headline = "Services"
+
+
+    [[params.services.list]]
+            icon = "fa-compass"
+            title = "Fisheries economics & analysis"
+            description = "Economic impact analysis of global fishing trends. Consultancy has been engaged by NGOs, academia, and journalists."
+            
+        [[params.services.list]]
+            icon = "fa-cloud"
+            title = "Global landings API"
+            description = "This [flagship product](https://github.com/OpenFisheries/api.openfisheries.org) forms the backbone of fisheries data science, enabling analytics in R, Python or any other language."
+
+        [[params.services.list]]
+			icon = "fa-flask"
+			title = "OpenFisheries Lab"
+			description = "Collaboration with [ROpenSci.org](https://ropensci.org/) to bring open fisheries data into reproducible science using the [R scientific programming language](https://github.com/ropensci/rfisheries)."
+
+		[[params.services.list]]
+            icon = "fa-github-alt"
+            title = "Open source"
+            description = "Fork and [contribute](https://github.com/OpenFisheries) to open source projects."
+
+
+    # Portfolio modals
+	[params.portfolio.modal]
+        client = "Client"
+        date = "Date"
+        category = "Category"
+        buttonText = "Close"
+
+    # Aside section
+	 [params.aside]
+	 	headline = "Support open science & the Open Fisheries project"
+    description = "OpenFisheries is a community funded project and depends on you for support. Please consider a donation to keep the work of Open Fisheries going."
+    
+		[params.aside.button]
+			text = "Become a patron"
+			link = "https://www.patreon.com/user?u=367562"
+
+	# Contact section
+	[params.contact]
+		headline = "Contact"
+		description = "Have a question or want to get in touch?"
+		# phone = "123-456-6789"
+		email = "openfisheries@gmail.com"
+
+	# Google Maps section
+	# [params.location]
+	# 	latitude  = "34.007850"
+	# 	longitude = "-118.499305"
+	# 	maps_api_key = ""
