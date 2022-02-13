@@ -1,8 +1,9 @@
-baseurl = "http://openfisheries.org/"
+baseurl = "/"
 languageCode = "en-us"
 title = "OpenFisheries"
 theme = "hugo-creative-theme"
 googleAnalytics = "UA-17319162-2"
+publishDir = "docs"
 
 [params]
 
@@ -89,9 +90,9 @@ googleAnalytics = "UA-17319162-2"
         buttonText = "Close"
 
     # Aside section
-	 [params.aside]
-	 	headline = "Support open science & the Open Fisheries project"
-    description = "OpenFisheries is a community funded project and depends on you for support. Please consider a donation to keep the work of Open Fisheries going."
+	 # [params.aside]
+	 	# headline = "Support open science & the Open Fisheries project"
+    # description = "OpenFisheries is a community funded project and depends on you for support. Please consider a donation to keep the work of Open Fisheries going."
     
 		[params.aside.button]
 			text = "Become a patron"
